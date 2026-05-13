@@ -1,0 +1,488 @@
+:root {
+    --text-color   : #1a1c20;
+    --link-color: #4a76ee;
+    --background-color: #eeeff1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+/*    scroll-behavior: smooth; */
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: poppings, sans-serif;
+    background-color:var(--background-color);
+}
+
+a {
+    color:var(--link-color);
+    text-decoration: none;
+}
+nav {
+    display: flex ;
+    justify-content: space-between;
+    padding : 0 50px;
+    align-items : center;
+    height: 80px;
+}
+
+nav .left a {
+    color: var(--text-color);
+    font-size :22px;
+    font-weight: 600;
+}
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color : var(--text-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.hero {
+    display :flex ;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+    padding: 5px 20px;
+    font-size: 18px;
+
+}
+/*FIRST MEDIA QUERY */
+@media (max-width: 740px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .Summary {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .profile-pic {
+        width: 250px;
+        margin-top: 20px;
+    }
+}
+
+.Summary {
+    max-width : 900px;
+    padding: 0 20px;
+    flex:5;
+}
+.Summary h2 {
+    font-size:30px
+}
+.links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin:4px;
+    
+}
+.links a:hover {
+    background-color: var(--link-color);
+    color: var(--background-color);
+    transition: 0.3s;
+}
+.profile-pic {
+    width: 375px;
+    border-radius: 50%;
+    align-items: center;
+    padding : 10px 15px;
+
+}
+/*Skills Section*/
+.skills {
+    padding: 0 50px;
+    margin-bottom:200 px;
+    padding-top:200px;
+    font-size: 18px;
+}
+.skills h2 {
+    font-size: 35px;
+    text-align: center;
+    
+}
+.skills .text {
+   text-align: center;
+   margin-bottom: 40px;
+
+}
+.skills .cells {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills .cells .cell {
+    width:200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    text-align:center;
+    border: 2px solid  #d3d3d3;
+    border-radius: 10px;
+}
+
+    
+    
+
+.skills .cells .cell img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+/*Contact Section*/
+.contacts {
+    padding: 10px 10px;
+    align-items:center;
+    text-align: center;
+    padding-top:200px;
+    
+}
+.contacts h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contacts .text {
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+    margin-bottom:70px;
+    font-size: 18px;
+}
+.contacts .contact-info {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    margin: 0 10 px;
+    gap: 10px;
+    flex-wrap: wrap;
+}   
+.contacts .contact-info a {
+    display: inline-block;
+    width :200px;
+    padding: 10px 15px;
+    justify-content: center;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    color:var(--text-color);
+
+
+}
+.contacts .contact-info a:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    transition: 0.3s;
+}
+
+/*Education Section*/
+.education {
+    padding: 10px 10px;
+    align-items:center;
+    text-align: center;
+    padding-top:200px;
+    margin: 10px 10px;
+ 
+}
+.education h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.education .history h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+
+}
+.education .history{
+    margin: 20px;
+}
+.education .history a {
+   margin: 20px;
+   padding : 20px;
+}
+.education .history img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin:20px;
+
+}
+
+/*About*/
+.About {
+    padding: 10px 10px;
+    align-items:center;
+    text-align: center;
+    padding-top:200px;
+    margin: 10px 10px;
+    font-size:18px;
+
+}
+.About h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.About .More{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    color:var(--text-color);
+    font-size : 18px;
+
+
+}
+.About .More a {
+    display: inline-block;
+    width :200px;
+    color:var(--text-color);
+}
+.About .More a:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    transition: 0.3s;
+}
+
+/*project header*/
+.right-links{
+   margin: 20px;
+   padding: 10px 15px;
+}
+.right-links .Moreover{
+    display :flex;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding : 5px 5px;
+    margin: 20px;
+    
+}
+.right-links .Moreover a {
+    display: inline-block;
+    width :150px;
+    padding: 10px 15px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    color:var(--text-color);
+}
+.right-links .Moreover a:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    transition: 0.3s;
+}
+.projects-section{
+    padding: 10px 10px;
+    align-items:center;
+    text-align: center;
+    padding-top:200px;
+    margin: 10px 10px;
+}
+.projects-section h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width : 1000px;
+    padding: 0 20px;
+    flex:5;
+}
+.projects-section .Academic .project-1 text{
+    max-width : 1000px;
+    padding: 0 20px;
+    text-align : center
+
+    
+}
+.projects-section .Academic {
+    font-size: 16px;
+    margin-bottom: 10px;
+    max-width : 1000px;
+    padding: 0 20px;
+    flex:5;
+    text-align:center
+}
+.projects-section  h2{
+    text-align:center;
+    font-size:25px'
+}
+
+.projects-section .Academic h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: center
+}
+.projects-section .Academic .project-1 .picture {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.projects-section .Academic .project-1 .picture  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    align-items :right;
+
+}
+.projects-section .Academic .project-1 h4{
+    font-size: 30px;
+}
+.timeline {
+    position: relative;
+    margin: 40px 0;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #ccc; /* vertical line */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -5px;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.timeline-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.timeline-content {
+    margin-left: 60px;
+}
+
+.timeline-content h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.timeline-content .date {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+/* Biography Section Styling */
+.bio {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    line-height: 1.7;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Title */
+.bio h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Paragraphs */
+.bio p {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+/* Optional subtle highlight for keywords */
+.bio p strong {
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .bio {
+        padding: 15px 20px;
+    }
+
+    .bio h2 {
+        font-size: 1.6rem;
+    }
+
+    .bio p {
+        font-size: 1rem;
+    }
+}
+.pictures img{
+     width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    align-items :right;
+
+}
+.certifications{
+    text-align:center;
+    margin:0 10px;
+    align-items:center;
+}
+.certifications  .pictures {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+}
+.clubs{
+    text-align:center;
+    margin:0 10px;
+    align-items:center;
+
+}
+.pictures, .picture {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+
+
+
